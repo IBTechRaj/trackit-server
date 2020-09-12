@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-has_secure_password
+  has_secure_password
 
   before_save { self.email = email.downcase }
   validates :username, presence: true
