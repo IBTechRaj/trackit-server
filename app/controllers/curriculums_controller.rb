@@ -1,5 +1,5 @@
 class CurriculumsController < ApplicationController
-  before_action :set_curriculum, only: %i[show update destroy]
+  #before_action :set_curriculum, only: %i[show update destroy]
 
   # GET /curriculus
   def index
@@ -56,7 +56,6 @@ class CurriculumsController < ApplicationController
 
   # Only allow a trusted parameter "white curriculum" through.
   def curriculum_params
-    params.require(:curriculum).permit(:user_id, :entry_date,
-                                       :name, :hours_done, :hours_target, :modules_done, :modules_target)
+    params.require(:curriculum).permit(:user_id, :entry_date, :name, :hours_done, :hours_target, :modules_done, :modules_target)
   end
 end

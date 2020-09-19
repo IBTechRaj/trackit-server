@@ -5,10 +5,11 @@ class UsersController < ApplicationController
     user = User.create(user_params)
     if user.valid?
       payload = { user_id: user.id }
-      token = encode_token(payload)
+      token = encode_token(payload, Time.now.to_i + 3600)
+      puts token
       render json: { user: user, jwt: token }
     else
-      render json: { errors: user.errors.full_messages }, status: :not_acceptable
+      render json: { errors: user.errors.full_messages, user: user }, status: :not_acceptable
     end
   end
 
@@ -16,6 +17,6 @@ class UsersController < ApplicationController
 
   def user_params
     # params.permit(:email, :password)
-    params.permit(:username, :email, :password, :confirm_password)
+    params.require(:user).permit(:username, :email, :password_digest)
   end
 end

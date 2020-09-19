@@ -1,14 +1,15 @@
-class AuthController < ApplicationController
-  skip_before_action :require_login, only: %i[login auto_login]
+class SessionsController < ApplicationController
+  
+skip_before_action :require_login, only: [:login, :auto_login]
 
   def login
     user = User.find_by(email: params[:email])
-    if user&.authenticate(params[:password])
+    if user && user.authenticate(params[:password])
       payload = { user_id: user.id }
-      token = encode_token(payload)
+      token = encode_token(payload, Time.now.to_i + 3600)
       render json: { user: user, jwt: token, success: "Welcome back, #{user.username}" }
     else
-      render json: { failure: 'Log in failed! Username or password invalid!' }
+      render json: { failure: 'Log in failed! Username or password invalid!', useer: user,em: params[:email] }
     end
   end
 
