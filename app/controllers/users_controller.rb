@@ -17,6 +17,6 @@ class UsersController < ApplicationController
 
   def user_params
     #  params.permit(:username, :email, :password_digest)
-     params.require(:newuser).permit(:username, :email, :password, :password_confirmation)
+    params.require(:newuser).permit(:username, :email, :password, :password_confirmation)
   end
 end
