@@ -32,13 +32,16 @@ Run npm start to start the development server. It will automatically open the pa
 You can see live demo [ here ](http://tracking-client.herokuapp.com/)
 
 # Screen Shots
-
+### Login Page
 ![weather screen shot 1](/images/track1.png)
 
+### Data entry form
 ![weather screen shot 2](/images/track2.png)
 
+### Logs display
 ![weather screen shot 3](/images/track3.png)
 
+### Progress bars
 ![weather screen shot 4](/images/track4.png)
 
 # Contribute
