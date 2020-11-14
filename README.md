@@ -1,24 +1,57 @@
-# README
+# Tracker-app (Frontend)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app keeps track of the progress of a user's technical training programme.  It accepts the data about the modules covered against the set targets and shows the details date-wise and progress is shown using a circular progress bar. This app is frontend that stores and retrieves data from a backend the data is stored in a backend (which is a different repo called 'trackit-server'.
 
-Things you may want to cover:
+# Technologies - Frontend
 
-* Ruby version
+- HTML/CSS
+- React
+- Redux
+- Bootstrap
+- Promises
 
-* System dependencies
+# Technologies - Backend
 
-* Configuration
+- Ruby on Rails API
+- JWT authentication
 
-* Database creation
+# Setup
 
-* Database initialization
+To run the project:
 
-* How to run the test suite
+Backend : Clone the repository: https://github.com/IBTechRaj/trackit-server
+Run 'bundle install'
+Run 'rails server' to start the server.
 
-* Services (job queues, cache servers, search engines, etc.)
+Frontend : Clone the repository: https://github.com/IBTechRaj/tracker-app-client.
+Run npm install. It will install all the dependencies required by the project.
+Run npm start to start the development server. It will automatically open the page in your default browser.
 
-* Deployment instructions
+# Live Demo
 
-* ...
+You can see live demo [ here ](http://tracking-client.herokuapp.com/)
+
+# Screen Shots
+
+![weather screen shot 1](/images/track1.png)
+
+![weather screen shot 2](/images/track2.png)
+
+![weather screen shot 3](/images/track3.png)
+
+![weather screen shot 4](/images/track4.png)
+
+# Contribute
+
+Feel free to contribute if you want to make it better.
+
+# Author
+
+* [Rajasekhar K ](https://ibtechraj.github.io/RajPortfolio/)
+* [Github](https://github.com/IBTechRaj)
+* [Email](krs30018@gmail.com)
+* [LinkedIn](https://www.linkedin.com/in/rajkatakamsetty/)
+* [Twitter](https://twitter.com/IBTechRaj) 
+
+# Licence
+This project is [MIT](https://github.com/IBTechRaj/tracker-app-client/blob/master/LICENSE) licencsed.
