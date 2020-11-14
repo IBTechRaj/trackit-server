@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_secure_password
+  has_many :curriculums, dependent: :destroy
 
   before_save { self.email = email.downcase }
   validates :username, presence: true
